@@ -3,11 +3,9 @@
 namespace Hawley\FormVisitor;
 
 class TextArea extends FormElement {
+    use TFormElementAcceptor;
+    
     protected function setDefault() {
         $this->value = '';
-    }
-    
-    public function accept(IFormElementVisitor $visitor) {
-        $visitor->visitTextArea($this);
     }
 }
